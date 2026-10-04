@@ -1,3 +1,4 @@
+import renderer.AsciiRenderer;
 import renderer.RasterRenderer;
 import renderer.Renderer;
 import renderer.VectorRenderer;
@@ -15,10 +16,11 @@ public class Main {
 
     public static void runDemo() {
         int passed = 0;
-        int total = 5;
+        int total = 7;
 
         Renderer vector = new VectorRenderer();
         Renderer raster = new RasterRenderer();
+        Renderer ascii = new AsciiRenderer();
 
         Circle circleVector = new Circle("shape-1", 2.0, vector);
         String actual1 = circleVector.execute();
@@ -71,6 +73,20 @@ public class Main {
         } else {
             System.out.println("T5 FAIL | sameObject=" + sameObject + " | stateUnchanged=" + stateUnchanged);
             System.out.println(" before=" + beforeResult + " | after=" + afterResult);
+        }
+
+        Circle circleAscii = new Circle("shape-3", 2.0, ascii);
+        String actual6 = circleAscii.execute();
+        String expected6 = "ASCII circle radius=2";
+        if (checkTest("T6", "Circle + AsciiRenderer", expected6, actual6)) {
+            passed++;
+        }
+
+        Square squareAscii = new Square("shape-4", 3.0, ascii);
+        String actual7 = squareAscii.execute();
+        String expected7 = "ASCII square side=3";
+        if (checkTest("T7", "Square + AsciiRenderer", expected7, actual7)) {
+            passed++;
         }
 
         System.out.println("SUMMARY: " + passed + "/" + total + " PASS");
