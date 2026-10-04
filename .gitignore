@@ -1,6 +1,8 @@
 ### IntelliJ IDEA ###
 .idea/
 *.iml
+*.zip
+report.html
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
