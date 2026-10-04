@@ -3,7 +3,7 @@
 - **Student:** Muratbek Akyl
 - **Group:** SE-2523
 - **Topic:** Option A (Drawing)
-- **Repository URL:** https://github.com/muratbek-akyl/SDP_Assignment3
+- **Repository URL:** https://github.com/akylsolo/SDP_Assignment3
 - **Base Commit Hash:** c178fa274853e3a96ddf2202e09df605497ec72b
 
 ---
